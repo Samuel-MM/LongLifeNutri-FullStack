@@ -1,0 +1,151 @@
+@font-face {
+  font-family: AmazonEmberMedium;
+  src: url('../assets/fonts/Ember/Amazon-Ember-Medium.ttf');
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+  font-family: AmazonEmberMedium, Arial, sans-serif;
+}
+
+main{
+  text-align: center;
+}
+
+header{
+  background-color: #0f1111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-text{
+  color: #fff;
+}
+
+.nav-search {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 620px;
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  padding-bottom: 15px;
+}
+
+
+.search-input {
+  max-width: 600px;
+  width: 100%;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+}
+
+.search-icon {
+  max-width: 45px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  background: #febd68;
+  color: #000;
+  cursor: pointer;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.grid-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.img-container {
+  max-height: 150px;
+  overflow: hidden;
+}
+
+.img-container img {
+  width: 100%;
+  height: auto;
+}
+
+.title {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.rating {
+  color: #FF9900;
+}
+
+.rating-value {
+  font-weight: bold;
+}
+
+.num-ratings {
+  color: #555;
+}
+
+@media only screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .nav-search{
+    width: 90%;
+  }
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.loading-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.loading-circle {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  border: 6px solid #0f1111;
+  border-radius: 50%;
+  border-top: 6px solid transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.error-text{
+  color: red;
+}
