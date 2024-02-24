@@ -12,7 +12,7 @@ Node.Js application that uses Express, and Cheerio to get data
 
 There's also a Postman Colection to help testing the endpoint
 
-> To run this code, execute ```npm start```. It should run on ```http://localhost:3000```
+To run this code, execute ```npm install```. After installing all dependencies, execute ```npm start```. It should run on ```http://localhost:3000```
 
 > It's not safe to commit .env file, but as it's just a test, I commited to help starting the project
 
